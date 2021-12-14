@@ -9,7 +9,7 @@
     <script type="module" src="./index.js"></script>
 </head>
 <body>
-    <div class="start-screen">
+    <div  id="startGame"class="start-screen" >
         <h1>Hand Pistol</h1>
         <div id="btn">
             <button id ="btn1"class="start">START</button>
@@ -24,6 +24,13 @@
             </div>
         </div>
         
+    </div>
+    <div id="gameContent" style="display: none;">
+        <div id="timerAndScore">
+            <div id="time"><span id="seconde">00:30</span> </div>
+            <div id="score"><span> Score:<span id="point">0</span></span></div>
+        </div >
+        <div id="gameBtn" class="bouton"><img src="./img/pepeDanceMini.gif" alt=""></div>
     </div>
 </body>
 </html>

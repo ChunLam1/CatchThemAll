@@ -3,10 +3,11 @@ body {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
   background-image: url(./img/western-background.png);
   background-repeat: no-repeat;
   background-size: cover;
+  height: 100vh;
+  overflow: hidden;
 }
 h1 {
   text-align: center;
@@ -62,22 +63,51 @@ h1 {
   display: block;
   position: fixed;
   border-radius: 10px;
-  top: 385px;
-  left: 450px;
-  /* visibility: visible; */
+  top: 387px;
+  left: 324px;
+  transition: all 500ms ease;
   background-color: rgba(212, 88, 88, 0.952);
-  /* transition: all 500ms ease; */
   color: rgba(51, 49, 36, 0.952);
+  opacity: 80%;
+  font-size: 25px;
 }
-
-/* .rulesText-hidden{ */
-/* position: fixed;
-    top: 385px;
-    left: 450px; */
-/* visibility: hidden; */
-/* display: none;  */
-/* z-index: 0;
-    background-color: rgba(212, 88, 88, 0.952);
-    color: rgba(51, 49, 36, 0.952);
-    border-radius: 10px; */
-/* };  */
+#time {
+  position: relative;
+  top: 40px;
+  left: 20px;
+}
+#time span {
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgba(0, 26, 73, 0.808);
+  background-color: rgb(218, 209, 95);
+  border-radius: 20%;
+  opacity: 0.9;
+  border: 4px solid;
+}
+#score {
+  position: relative;
+  top: 50px;
+  left: 20px;
+}
+#score > span {
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgba(0, 26, 73, 0.808);
+  background-color: rgb(218, 209, 95);
+  border-radius: 20%;
+  opacity: 0.9;
+  border: 4px solid;
+}
+.bouton {
+  position: relative;
+  top: 90px;
+  left: 400px;
+  cursor: cell;
+  background: transparent;
+  border: transparent;
+}
+.random {
+  position: absolute;
+  display: inline;
+}
