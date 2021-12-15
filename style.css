@@ -68,8 +68,9 @@ h1 {
   transition: all 500ms ease;
   background-color: rgba(212, 88, 88, 0.952);
   color: rgba(51, 49, 36, 0.952);
-  opacity: 80%;
-  font-size: 25px;
+  opacity: 90%;
+  font-size: 30px;
+  font-weight: bold;
 }
 #time {
   position: relative;
@@ -110,4 +111,33 @@ h1 {
 .random {
   position: absolute;
   display: inline;
+  cursor: pointer;
+}
+#scoreBoard {
+  text-align: center;
+  display: block;
+  position: fixed;
+  border-radius: 10px;
+  top: 90px;
+  left: 310px;
+  transition: all 1500ms ease-in;
+  background-color: rgba(211, 85, 85, 0.952);
+  color: rgba(51, 49, 36, 0.952);
+  opacity: 1;
+  font-size: 35px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+#winScore {
+  text-align: center;
+  display: block;
+  position: fixed;
+  border-radius: 10px;
+  top: 120px;
+  left: 480px;
+  transition: all 1500ms ease-in;
+  background-color: rgba(211, 85, 85, 0.952);
+  color: rgba(51, 49, 36, 0.952);
+  opacity: 1;
+  font-size: 35px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
