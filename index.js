@@ -124,7 +124,7 @@ function generation(imag, fonction, temps) {
 }
 // Normal mode after clicking on the START btn
 function plaay() {
-  sound.volume = 0.5;
+  sound.volume = 2;
   sound.play();
   startGame.style.display = "none";
   gameContent.style.display = "block";
@@ -163,7 +163,7 @@ btn1.addEventListener("click", plaay);
 //INSANEMODE :)
 
 function plaayInsaneMode() {
-  sound.volume = 0.9;
+  sound.volume = 1;
   sound.play();
   startGame.style.display = "none";
   gameContent.style.display = "block";
