@@ -155,10 +155,10 @@ function plaay() {
   }, 30000);
   const endGame = setTimeout(timeUp, 32000);
 }
-// function mainSong(){
-//   music.stop()
-// }
-// btn1.addEventListener("click",mainSong )
+function mainSong() {
+  music.pause();
+}
+btn1.addEventListener("click", mainSong);
 btn1.addEventListener("click", plaay);
 //INSANEMODE :)
 
@@ -198,5 +198,5 @@ function plaayInsaneMode() {
 btn3.addEventListener("click", plaayInsaneMode);
 
 // music.addEventListener("canplaythrough", () => music.play());
-// music.play();
+music.play();
 // music.addEventListener("canplay", () => music.play());

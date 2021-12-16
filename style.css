@@ -41,7 +41,7 @@ h1 {
   /* position: absolute;
   top: 610px;
   left: 656px; */
-  margin-top: 300px;
+  margin-top: 240px;
 }
 
 #textId {
@@ -107,7 +107,7 @@ h1 {
   text-align: center;
   display: block;
   position: fixed;
-  border-radius: 10px;
+  border-radius: 112px;
   top: 20px;
   left: 252px;
   transition: all 1500ms ease-in;
@@ -121,7 +121,7 @@ h1 {
   text-align: center;
   display: block;
   position: fixed;
-  border-radius: 25px;
+  border-radius: 55px;
   top: 120px;
   left: 350px;
   transition: all 1500ms ease-in;
