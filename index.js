@@ -26,6 +26,8 @@ const message = document.getElementById("message");
 const message2 = document.getElementById("message2");
 const winScore = document.getElementById("winScore");
 const mainPage = document.getElementById("mainPage");
+const mainPage2 = document.getElementById("mainPage2");
+
 let score = 0;
 
 function loadRules() {
@@ -77,12 +79,10 @@ function scoreMess(mess) {
   } else mess.textContent = "You are so noob !! Go training !!!";
 }
 function goMainPage() {
-  gameContent.style.display = "none";
-  winScore.style.display = "none";
-  scoreContent.style.display = "none";
-  startGame.style.display = "block";
+  window.location.reload()
 }
 mainPage.addEventListener("click", goMainPage);
+mainPage2.addEventListener("click", goMainPage);
 // function timeUp() {
 //   if (seconde.textContent = "00:27"){
 //     gameContent.style.visibility = "hidden";
@@ -110,6 +110,10 @@ function generation() {
     Math.floor(
       Math.random() * (document.body.clientHeight - img.clientHeight - 1)
     ) + "px";
+    // img.onclick = (evt) => {
+    //   setTimeout(()=>{evt.target.remove();},2000)
+    // }
+    setTimeout(()=>{img.target.remove();},2000)
 }
 function generation2() {
   const div = document.createElement("div");
@@ -126,7 +130,7 @@ function generation2() {
     ) + "px";
   div.style.top =
     Math.floor(
-      Math.random() * (document.body.clientHeight - img.clientHeight - 1)
+      Math.random() * (document.body.clientHeight - img.clientHeight + 1)
     ) + "px";
 }
 function generationDynamite() {
@@ -144,7 +148,7 @@ function generationDynamite() {
     ) + "px";
   div.style.top =
     Math.floor(
-      Math.random() * (document.body.clientHeight - img.clientHeight - 1)
+      Math.random() * (document.body.clientHeight - img.clientHeight + 1)
     ) + "px";
 }
 function generationBabyPat() {
@@ -162,7 +166,7 @@ function generationBabyPat() {
     ) + "px";
   div.style.top =
     Math.floor(
-      Math.random() * (document.body.clientHeight - img.clientHeight - 1)
+      Math.random() * (document.body.clientHeight - img.clientHeight + 1)
     ) + "px";
 }
 function play() {
