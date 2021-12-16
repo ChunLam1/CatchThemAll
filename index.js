@@ -4,6 +4,7 @@ const rulesText = document.querySelector("rulesText-hidden");
 const textId = document.getElementById("textId");
 const btn1 = document.getElementById("btn1");
 const btn2 = document.getElementById("btn2");
+const btn3 = document.getElementById("btn3");
 const startGame = document.getElementById("startGame");
 // Chronometer content //
 const chronometer = new Chronometer();
@@ -124,7 +125,7 @@ function generation(imag, fonction, temps) {
 }
 // Normal mode after clicking on the START btn
 function plaay() {
-  sound.volume = 2;
+  // sound.volume = 1;
   sound.play();
   startGame.style.display = "none";
   gameContent.style.display = "block";
@@ -159,11 +160,13 @@ function mainSong() {
   music.pause();
 }
 btn1.addEventListener("click", mainSong);
+btn3.addEventListener("click", mainSong);
+
 btn1.addEventListener("click", plaay);
 //INSANEMODE :)
 
 function plaayInsaneMode() {
-  sound.volume = 1;
+  // sound.volume = 1;
   sound.play();
   startGame.style.display = "none";
   gameContent.style.display = "block";
@@ -198,5 +201,7 @@ function plaayInsaneMode() {
 btn3.addEventListener("click", plaayInsaneMode);
 
 // music.addEventListener("canplaythrough", () => music.play());
+// music.muted = false;
 music.play();
+music.loop = true;
 // music.addEventListener("canplay", () => music.play());
