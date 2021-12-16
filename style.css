@@ -58,7 +58,7 @@ h1 {
 #textId {
   display: none;
   left: 116px;
-}
+};
 
 #textId.rulesText-visible {
   display: block;
