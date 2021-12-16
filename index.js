@@ -31,7 +31,6 @@ const sound2 = new Audio("./audio/sonTir.mp3");
 const sound3 = new Audio("./audio/BombeSound.mp3");
 const music = new Audio("./audio/Mainsong.mp3");
 
-
 //image
 const gif1 = "./img/pepeDanceMini.gif";
 const gif2 = "./img/patrikgif.gif";
@@ -164,7 +163,7 @@ btn1.addEventListener("click", plaay);
 //INSANEMODE :)
 
 function plaayInsaneMode() {
-  sound.volume = 0.5;
+  sound.volume = 0.9;
   sound.play();
   startGame.style.display = "none";
   gameContent.style.display = "block";
