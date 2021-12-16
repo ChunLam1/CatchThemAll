@@ -25,9 +25,12 @@ const message2 = document.getElementById("message2");
 const winScore = document.getElementById("winScore");
 const mainPage = document.getElementById("mainPage");
 const mainPage2 = document.getElementById("mainPage2");
+//AUDIO
 const sound = new Audio("./audio/backgroundTheme.mp3");
 const sound2 = new Audio("./audio/sonTir.mp3");
 const sound3 = new Audio("./audio/BombeSound.mp3");
+const music = new Audio("./audio/Mainsong.mp3");
+
 
 //image
 const gif1 = "./img/pepeDanceMini.gif";
@@ -85,14 +88,17 @@ function timeUp() {
   finalPoint2.innerHTML = score;
   scoreMess(message2);
 }
+
 function scoreMess(mess) {
   if (score >= 500) {
     mess.textContent = "Hey ! You are doing great !";
   } else mess.textContent = "You are so noob !! Go training !!!";
 }
+
 function goMainPage() {
   window.location.reload();
 }
+
 mainPage.addEventListener("click", goMainPage);
 mainPage2.addEventListener("click", goMainPage);
 
@@ -119,7 +125,7 @@ function generation(imag, fonction, temps) {
 }
 // Normal mode after clicking on the START btn
 function plaay() {
-  sound.volume = 0.4;
+  sound.volume = 0.5;
   sound.play();
   startGame.style.display = "none";
   gameContent.style.display = "block";
@@ -150,12 +156,15 @@ function plaay() {
   }, 30000);
   const endGame = setTimeout(timeUp, 32000);
 }
+function mainSong(){
+  music.stop()
+}
+btn1.addEventListener("click",mainSong )
 btn1.addEventListener("click", plaay);
-
 //INSANEMODE :)
 
 function plaayInsaneMode() {
-  sound.volume = 0.4;
+  sound.volume = 0.5;
   sound.play();
   startGame.style.display = "none";
   gameContent.style.display = "block";
@@ -186,9 +195,9 @@ function plaayInsaneMode() {
   }, 30000);
   const endGame = setTimeout(timeUp, 32000);
 }
+
 btn3.addEventListener("click", plaayInsaneMode);
 
-const music = new Audio("./audio/Mainsong.mp3");
 // music.addEventListener("canplaythrough", () => music.play());
 // music.play();
-music.addEventListener("canplay", () => music.play());
+// music.addEventListener("canplay", () => music.play());
