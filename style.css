@@ -130,7 +130,7 @@ h1 {
   font-size: 35px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-#mainPage {
+.mainP {
   display: inline-block;
   background-color: #be2f2f7e;
   border-radius: 25px;
@@ -145,20 +145,8 @@ h1 {
   transition: all 0.5s;
   font-family: cursive;
 }
-#mainPage2 {
-  display: inline-block;
-  background-color: #be2f2f7e;
-  border-radius: 10px;
-  border: 4px double #d6d2bd;
-  color: #f3e6e6e8;
-  text-align: center;
-  font-size: 15px;
-  padding: 20px;
-  width: 190px;
-  cursor: pointer;
-  margin: 5px;
-  transition: all 0.5s;
-  font-family: cursive;
+.mainP:hover {
+  color: brown;
 }
 #message {
   margin-top: 0px;
