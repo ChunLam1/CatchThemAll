@@ -156,10 +156,10 @@ function plaay() {
   }, 30000);
   const endGame = setTimeout(timeUp, 32000);
 }
-function mainSong(){
-  music.stop()
-}
-btn1.addEventListener("click",mainSong )
+// function mainSong(){
+//   music.stop()
+// }
+// btn1.addEventListener("click",mainSong )
 btn1.addEventListener("click", plaay);
 //INSANEMODE :)
 
