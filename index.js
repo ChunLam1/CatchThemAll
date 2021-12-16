@@ -1,7 +1,5 @@
 import { Chronometer } from "./timer.js";
 
-const btnStart = document.querySelector("start");
-const btnRules = document.querySelector("rules");
 const rulesText = document.querySelector("rulesText-hidden");
 const textId = document.getElementById("textId");
 const btn1 = document.getElementById("btn1");
@@ -27,7 +25,15 @@ const message2 = document.getElementById("message2");
 const winScore = document.getElementById("winScore");
 const mainPage = document.getElementById("mainPage");
 const mainPage2 = document.getElementById("mainPage2");
+const sound = new Audio("./audio/backgroundTheme.mp3");
+const sound2 = new Audio("./audio/sonTir.mp3");
+const sound3 = new Audio("./audio/BombeSound.mp3");
 
+//image
+const gif1 = "./img/pepeDanceMini.gif";
+const gif2 = "./img/patrikgif.gif";
+const gif3 = "./img/Dynamite.gif";
+const gif4 = "./img/babyPatrick.gif";
 let score = 0;
 
 function loadRules() {
@@ -44,6 +50,8 @@ function Timer() {
 
 // gameContent//
 function targetOnClick() {
+  sound2.currentTime = 0;
+  sound2.play();
   score += 20;
   point.innerHTML = score;
   this.remove();
@@ -51,11 +59,15 @@ function targetOnClick() {
   // generation();
 }
 function targetOnClick2() {
+  sound2.currentTime = 0;
+  sound2.play();
   score += 35;
   point.innerHTML = score;
   this.remove();
 }
 function targetOnClick3() {
+  sound3.currentTime = 0;
+  sound3.play();
   gameContent.style.visibility = "hidden";
   scoreContent.style.display = "block";
   winScore.style.visibility = "hidden";
@@ -63,6 +75,8 @@ function targetOnClick3() {
   scoreMess(message);
 }
 function targetOnClick4() {
+  sound2.currentTime = 0;
+  sound2.play();
   score += 45;
   point.innerHTML = score;
   this.remove();
@@ -83,103 +97,47 @@ function goMainPage() {
 }
 mainPage.addEventListener("click", goMainPage);
 mainPage2.addEventListener("click", goMainPage);
-// function timeUp() {
-//   if (seconde.textContent = "00:27"){
-//     gameContent.style.visibility = "hidden";
-//     scoreContent.style.visibility = "visible";
-//   }
-// }
-// setTimeout (()=>{clearInterval(intervalspawn)},5000);
+
 btn.onclick = targetOnClick;
 
 //function that makes the target spawn randomly
-function generation() {
+function generation(imag, fonction, temps) {
   const div = document.createElement("div");
   div.classList.add("random");
   const img = document.createElement("img");
-  img.setAttribute("src", "./img/pepeDanceMini.gif");
+  img.setAttribute("src", imag);
   div.appendChild(img);
   gameContent.appendChild(div);
-  div.onclick = targetOnClick;
-  // Math.floor(Math.random()*(max-min+1)+min)
+  div.onclick = fonction;
   div.style.left =
-    Math.floor(
-      Math.random() * (document.body.clientWidth - img.clientWidth + 1)
-    ) + "px";
+    Math.floor(Math.random() * (document.body.clientWidth - img.width + 1)) +
+    "px";
   div.style.top =
-    Math.floor(
-      Math.random() * (document.body.clientHeight - img.clientHeight - 1)
-    ) + "px";
-  // img.onclick = (evt) => {
-  //   setTimeout(()=>{evt.target.remove();},2000)
-  // }
+    Math.floor(Math.random() * (document.body.clientHeight - img.height - 1)) +
+    "px";
   setTimeout(() => {
-    img.target.remove();
-  }, 2000);
+    img.remove();
+  }, temps);
 }
-function generation2() {
-  const div = document.createElement("div");
-  div.classList.add("random");
-  const img = document.createElement("img");
-  img.setAttribute("src", "./img/patrikgif.gif");
-  div.appendChild(img);
-  gameContent.appendChild(div);
-  div.onclick = targetOnClick2;
-  // Math.floor(Math.random()*(max-min+1)+min)
-  div.style.left =
-    Math.floor(
-      Math.random() * (document.body.clientWidth - img.clientWidth + 1)
-    ) + "px";
-  div.style.top =
-    Math.floor(
-      Math.random() * (document.body.clientHeight - img.clientHeight + 1)
-    ) + "px";
-}
-function generationDynamite() {
-  const div = document.createElement("div");
-  div.classList.add("random");
-  const img = document.createElement("img");
-  img.setAttribute("src", "./img/Dynamite.gif");
-  div.appendChild(img);
-  gameContent.appendChild(div);
-  div.onclick = targetOnClick3;
-  // Math.floor(Math.random()*(max-min+1)+min)
-  div.style.left =
-    Math.floor(
-      Math.random() * (document.body.clientWidth - img.clientWidth + 1)
-    ) + "px";
-  div.style.top =
-    Math.floor(
-      Math.random() * (document.body.clientHeight - img.clientHeight + 1)
-    ) + "px";
-}
-function generationBabyPat() {
-  const div = document.createElement("div");
-  div.classList.add("random");
-  const img = document.createElement("img");
-  img.setAttribute("src", "./img/babyPatrick.gif");
-  div.appendChild(img);
-  gameContent.appendChild(div);
-  div.onclick = targetOnClick4;
-  // Math.floor(Math.random()*(max-min+1)+min)
-  div.style.left =
-    Math.floor(
-      Math.random() * (document.body.clientWidth - img.clientWidth + 1)
-    ) + "px";
-  div.style.top =
-    Math.floor(
-      Math.random() * (document.body.clientHeight - img.clientHeight + 1)
-    ) + "px";
-}
-function play() {
+// Normal mode after clicking on the START btn
+function plaay() {
+  sound.volume = 0.4;
+  sound.play();
   startGame.style.display = "none";
   gameContent.style.display = "block";
   chronometer.start(Timer);
-  const intervalspawn = setInterval(generation, 1100);
-  const intervalspawn2 = setInterval(generation2, 5000);
-  const intervalspawn3 = setInterval(generationDynamite, 6500);
-  const intervalspawn4 = setInterval(generationBabyPat, 7000);
-
+  const intervalspawn = setInterval(() => {
+    generation(gif1, targetOnClick, 2000);
+  }, 1000);
+  const intervalspawn2 = setInterval(() => {
+    generation(gif2, targetOnClick2, 2000);
+  }, 5000);
+  const intervalspawn3 = setInterval(() => {
+    generation(gif3, targetOnClick3, 2000);
+  }, 3000);
+  const intervalspawn4 = setInterval(() => {
+    generation(gif4, targetOnClick4, 2000);
+  }, 7000);
   setTimeout(() => {
     clearInterval(intervalspawn);
   }, 30000);
@@ -194,4 +152,40 @@ function play() {
   }, 30000);
   const endGame = setTimeout(timeUp, 32000);
 }
-btn1.addEventListener("click", play);
+btn1.addEventListener("click", plaay);
+
+//INSANEMODE :)
+
+function plaayInsaneMode() {
+  sound.volume = 0.4;
+  sound.play();
+  startGame.style.display = "none";
+  gameContent.style.display = "block";
+  chronometer.start(Timer);
+  const intervalspawn = setInterval(() => {
+    generation(gif1, targetOnClick, 1400);
+  }, 800);
+  const intervalspawn2 = setInterval(() => {
+    generation(gif2, targetOnClick2, 2000);
+  }, 1000);
+  const intervalspawn3 = setInterval(() => {
+    generation(gif3, targetOnClick3, 2400);
+  }, 650);
+  const intervalspawn4 = setInterval(() => {
+    generation(gif4, targetOnClick4, 1500);
+  }, 1500);
+  setTimeout(() => {
+    clearInterval(intervalspawn);
+  }, 30000);
+  setTimeout(() => {
+    clearInterval(intervalspawn2);
+  }, 30000);
+  setTimeout(() => {
+    clearInterval(intervalspawn3);
+  }, 30000);
+  setTimeout(() => {
+    clearInterval(intervalspawn4);
+  }, 30000);
+  const endGame = setTimeout(timeUp, 32000);
+}
+btn3.addEventListener("click", plaayInsaneMode);
