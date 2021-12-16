@@ -55,8 +55,6 @@ function targetOnClick() {
   score += 20;
   point.innerHTML = score;
   this.remove();
-  // generation(random,src,im);
-  // generation();
 }
 function targetOnClick2() {
   sound2.currentTime = 0;
@@ -189,3 +187,8 @@ function plaayInsaneMode() {
   const endGame = setTimeout(timeUp, 32000);
 }
 btn3.addEventListener("click", plaayInsaneMode);
+
+const music = new Audio("./audio/Mainsong.mp3");
+// music.addEventListener("canplaythrough", () => music.play());
+// music.play();
+music.addEventListener("canplay", () => music.play());
