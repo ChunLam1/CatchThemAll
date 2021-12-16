@@ -58,14 +58,14 @@ h1 {
 #textId {
   display: none;
   left: 116px;
-};
+}
 
 #textId.rulesText-visible {
   display: block;
   position: fixed;
   border-radius: 10px;
   top: 387px;
-  left: 148px;
+  left: 147px;
   transition: all 500ms ease;
   background-color: rgba(212, 88, 88, 0.952);
   color: rgba(51, 49, 36, 0.952);
