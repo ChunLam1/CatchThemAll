@@ -38,9 +38,10 @@ h1 {
   color: brown;
 }
 #btn3 {
-  position: absolute;
+  /* position: absolute;
   top: 610px;
-  left: 656px;
+  left: 656px; */
+  margin-top: 300px;
 }
 
 #textId {
