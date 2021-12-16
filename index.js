@@ -79,7 +79,7 @@ function scoreMess(mess) {
   } else mess.textContent = "You are so noob !! Go training !!!";
 }
 function goMainPage() {
-  window.location.reload()
+  window.location.reload();
 }
 mainPage.addEventListener("click", goMainPage);
 mainPage2.addEventListener("click", goMainPage);
@@ -110,10 +110,12 @@ function generation() {
     Math.floor(
       Math.random() * (document.body.clientHeight - img.clientHeight - 1)
     ) + "px";
-    // img.onclick = (evt) => {
-    //   setTimeout(()=>{evt.target.remove();},2000)
-    // }
-    setTimeout(()=>{img.target.remove();},2000)
+  // img.onclick = (evt) => {
+  //   setTimeout(()=>{evt.target.remove();},2000)
+  // }
+  setTimeout(() => {
+    img.target.remove();
+  }, 2000);
 }
 function generation2() {
   const div = document.createElement("div");
