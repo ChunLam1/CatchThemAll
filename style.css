@@ -58,7 +58,6 @@ h1 {
 #textId {
   display: none;
   left: 116px;
-
 }
 
 #textId.rulesText-visible {
@@ -133,9 +132,9 @@ h1 {
   text-align: center;
   display: block;
   position: fixed;
-  border-radius: 10px;
+  border-radius: 25px;
   top: 120px;
-  left: 480px;
+  left: 350px;
   transition: all 1500ms ease-in;
   background-color: rgba(211, 85, 85, 0.952);
   color: rgba(51, 49, 36, 0.952);
@@ -146,7 +145,7 @@ h1 {
 #mainPage {
   display: inline-block;
   background-color: #be2f2f7e;
-  border-radius: 10px;
+  border-radius: 25px;
   border: 4px double #d6d2bd;
   color: #f3e6e6e8;
   text-align: center;
@@ -177,7 +176,7 @@ h1 {
   margin-top: 0px;
   margin-bottom: 0px;
 }
-#message2{
+#message2 {
   margin-top: 0px;
   margin-bottom: 0px;
 }
