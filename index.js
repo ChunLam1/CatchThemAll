@@ -25,6 +25,7 @@ const finalPoint2 = document.getElementById("finalPoint2");
 const message = document.getElementById("message");
 const message2 = document.getElementById("message2");
 const winScore = document.getElementById("winScore");
+const mainPage = document.getElementById("mainPage");
 let score = 0;
 
 function loadRules() {
@@ -55,6 +56,7 @@ function targetOnClick2() {
 function targetOnClick3() {
   gameContent.style.visibility = "hidden";
   scoreContent.style.display = "block";
+  winScore.style.visibility = "hidden";
   finalPoint.innerHTML = score;
   scoreMess(message);
 }
@@ -64,7 +66,7 @@ function targetOnClick4() {
   this.remove();
 }
 function timeUp() {
-  gameContent.style.visibility = "hidden";
+  gameContent.style.display = "none";
   winScore.style.display = "block";
   finalPoint2.innerHTML = score;
   scoreMess(message2);
@@ -74,6 +76,13 @@ function scoreMess(mess) {
     mess.textContent = "Hey ! You are doing great !";
   } else mess.textContent = "You are so noob !! Go training !!!";
 }
+function goMainPage() {
+  gameContent.style.display = "none";
+  winScore.style.display = "none";
+  scoreContent.style.display = "none";
+  startGame.style.display = "block";
+}
+mainPage.addEventListener("click", goMainPage);
 // function timeUp() {
 //   if (seconde.textContent = "00:27"){
 //     gameContent.style.visibility = "hidden";
@@ -158,7 +167,7 @@ function generationBabyPat() {
 }
 function play() {
   startGame.style.display = "none";
-  gameContent.style.display = "";
+  gameContent.style.display = "block";
   chronometer.start(Timer);
   const intervalspawn = setInterval(generation, 1100);
   const intervalspawn2 = setInterval(generation2, 5000);
