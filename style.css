@@ -213,3 +213,10 @@ h1 {
     opacity: 0;
   }
 }
+.funImg {
+  width: 238px;
+  position: fixed;
+  top: 389px;
+  left: 1074px;
+}
+
