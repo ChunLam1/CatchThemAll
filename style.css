@@ -31,7 +31,7 @@ h1 {
   font-size: 25px;
   padding: 20px;
   width: 190px;
-  cursor:none;
+  cursor: none;
   margin: 5px;
   transition: all 0.5s;
 }
@@ -142,7 +142,7 @@ h1 {
   font-size: 15px;
   padding: 20px;
   width: 190px;
-  cursor: none;
+  cursor: pointer;
   margin: 5px;
   transition: all 0.5s;
   font-family: cursive;
