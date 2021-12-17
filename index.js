@@ -39,6 +39,9 @@ const gif3 = "./img/Dynamite.gif";
 const gif4 = "./img/babyPatrick.gif";
 let score = 0;
 
+music.play();
+music.loop = true;
+
 function loadRules() {
   textId.classList.toggle("rulesText-hidden");
   textId.classList.toggle("rulesText-visible");
@@ -200,8 +203,16 @@ function plaayInsaneMode() {
 
 btn3.addEventListener("click", plaayInsaneMode);
 
-// music.addEventListener("canplaythrough", () => music.play());
-// music.muted = false;
-music.play();
-music.loop = true;
-// music.addEventListener("canplay", () => music.play());
+const cursor = document.querySelector('.cursor');
+
+document.addEventListener('mousemove', e => {
+    cursor.setAttribute('style', 'top:'+(e.pageY - 20)+"px; left:"+(e.pageX - 20)+"px;")
+})
+
+document.addEventListener('click', ()=>{
+    cursor.classList.add('expand');
+
+    setTimeout(()=>{
+        cursor.classList.remove("expand");
+    }, 250);
+})
