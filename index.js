@@ -175,17 +175,17 @@ function plaayInsaneMode() {
   gameContent.style.display = "block";
   chronometer.start(Timer);
   const intervalspawn = setInterval(() => {
-    generation(gif1, targetOnClick, 1400);
-  }, 800);
+    generation(gif1, targetOnClick, 3400);
+  }, 200);
   const intervalspawn2 = setInterval(() => {
-    generation(gif2, targetOnClick2, 2000);
-  }, 1000);
+    generation(gif2, targetOnClick2, 4000);
+  }, 800);
   const intervalspawn3 = setInterval(() => {
-    generation(gif3, targetOnClick3, 3000);
-  }, 250);
+    generation(gif3, targetOnClick3, 4000);
+  }, 150);
   const intervalspawn4 = setInterval(() => {
-    generation(gif4, targetOnClick4, 1500);
-  }, 1500);
+    generation(gif4, targetOnClick4, 2500);
+  }, 1000);
   setTimeout(() => {
     clearInterval(intervalspawn);
   }, 30000);
