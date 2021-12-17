@@ -181,8 +181,8 @@ function plaayInsaneMode() {
     generation(gif2, targetOnClick2, 2000);
   }, 1000);
   const intervalspawn3 = setInterval(() => {
-    generation(gif3, targetOnClick3, 2400);
-  }, 650);
+    generation(gif3, targetOnClick3, 3000);
+  }, 250);
   const intervalspawn4 = setInterval(() => {
     generation(gif4, targetOnClick4, 1500);
   }, 1500);
@@ -203,16 +203,19 @@ function plaayInsaneMode() {
 
 btn3.addEventListener("click", plaayInsaneMode);
 
-const cursor = document.querySelector('.cursor');
+const cursor = document.querySelector(".cursor");
 
-document.addEventListener('mousemove', e => {
-    cursor.setAttribute('style', 'top:'+(e.pageY - 20)+"px; left:"+(e.pageX - 20)+"px;")
-})
+document.addEventListener("mousemove", (e) => {
+  cursor.setAttribute(
+    "style",
+    "top:" + (e.pageY - 20) + "px; left:" + (e.pageX - 20) + "px;"
+  );
+});
 
-document.addEventListener('click', ()=>{
-    cursor.classList.add('expand');
+document.addEventListener("click", () => {
+  cursor.classList.add("expand");
 
-    setTimeout(()=>{
-        cursor.classList.remove("expand");
-    }, 250);
-})
+  setTimeout(() => {
+    cursor.classList.remove("expand");
+  }, 250);
+});
