@@ -150,10 +150,12 @@ h1 {
 .mainP:hover {
   color: brown;
 }
+
 #message {
   margin-top: 0px;
   margin-bottom: 0px;
 }
+
 #message2 {
   margin-top: 0px;
   margin-bottom: 0px;
